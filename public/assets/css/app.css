@@ -2282,7 +2282,7 @@ section .all .slider .item-box {
     height: 400px;
     position: relative;
     border-radius: 3px;
-    background: no-repeat url(../images/640x450.jpg) center center;
+    /* background: no-repeat url(../images/640x450.jpg) center center; */
     background-size: cover;
 }
 
