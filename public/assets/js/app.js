@@ -328,7 +328,8 @@ jQuery(document).ready(function() {
             $(".slider .owl-prev").trigger('click');
         });
         $('.slider-two .item').click(function() {
-            var b = $(".item").index(this);
+            var b = $(".slider-two .item").index(this);
+            // console.log("b",b);
             $(".slider .owl-dots .owl-dot").eq(b).trigger('click');
             $(".slider-two .item").removeClass("active");
             $(this).addClass("active");
