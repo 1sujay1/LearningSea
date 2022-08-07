@@ -6,7 +6,7 @@ const FCMUser = mongoose.model(
         user_id: String,
         fcm_token: String,
         device_id: String,
-    }),
+    },{timestamps:true}),
     "fcm_user"
 );
 

@@ -21,15 +21,15 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-// mongoose.connect(process.env.MONGO_DD, {
-//     useNewUrlParser: true, useUnifiedTopology: true
-// })
+mongoose.connect(process.env.MONGO_DD, {
+    useNewUrlParser: true, useUnifiedTopology: true
+})
 
-//     .then(console.log("Connected to mongodb instance" + process.env.MONGO_DD))
-//     .catch(err => {
-//         console.error("Err0r connecting to mongodb", err)
-// process.exit();
-//     })
+    .then(console.log("Connected to mongodb instance... " + process.env.MONGO_DD))
+    .catch(err => {
+        console.error("Err0r connecting to mongodb ", err)
+process.exit();
+    })
 
 
 app.get('/', (req, res) => {

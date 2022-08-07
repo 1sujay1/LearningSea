@@ -5,7 +5,7 @@ const MobileOTP = mongoose.model(
     new mongoose.Schema({
         mobile: Number,
         isVerified: Boolean,
-    }),
+    },{timestamps:true}),
     "mobile_otp"
 );
 
