@@ -2,10 +2,10 @@ jQuery(document).ready(function() {
     "use strict";
     jQuery("[data-toggle='tooltip']").tooltip();
     jQuery(".chosen-select").chosen();
-    $(".btn-group > .btn").click(function() {
-        $(".btn-group > .btn").removeClass("active");
-        $(this).addClass("active");
-    });
+    // $(".btn-group > .btn").click(function() {
+    //     $(".btn-group > .btn").removeClass("active");
+    //     $(this).addClass("active");
+    // });
 
      // ------------------------------------------------------------------------------ //
     // Color plate 

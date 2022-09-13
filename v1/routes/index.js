@@ -19,6 +19,8 @@ const roles = {
 const account = require('../controllers/accountController');
 const property = require('../controllers/propertiesController');
 const country = require('../controllers/countryController');
+const aws = require('../controllers/awsController');
+const upload = require('../controllers/uploadController');
 
 /**
  * Middlewares
@@ -36,6 +38,16 @@ var authorize = function (schema, tokenVerify, role) {
         middleware.validate(req, res, next, schema, tokenVerify, role);
     };
 };
+
+// router.get('/yes',(req,res)=>{
+//     return res.send("yes")
+// })
+
+/**Upload Controller */
+router.get('/uploads/images/:key',authorize(null,false),upload.awsGetS3File)
+router.delete('/uploads/images/:key',authorize(null,false),upload.deleteFileFromAWS)
+router.post('/uploads/file', authorize(null, false), upload.awsSingleUpload);
+router.post('/uploads/files', upload.awsMultiUpload);
 
 router.post('/account/signin', authorize(null, false), account.login);
 router.get('/home',authorize(null,false),account.testRun)
@@ -56,5 +68,7 @@ router.get('/country',authorize(null,false),country.getCountry)
 router.post('/city',authorize(null,false),country.createCity)
 router.get('/city',authorize(null,false),country.getCity)
 
+/**File read and write */
+router.get('/propfileCreate',authorize(null,false),property.propertyFileCreate)
 
 module.exports = router;

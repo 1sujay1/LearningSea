@@ -1,4 +1,28 @@
 var headerMenu = `
+<div class="top-header top-header-div">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="wrap-top-information">
+                <ul class="list-inline left">
+                    <li><a href="#"><i class="fa fa-phone"></i><span>Call us: 290 986 1386 </span></a></li> 
+                    <li><a href="#"><i class="fa fa-home"></i><span>Email: support24-7@gmail.com </span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="wrap-top-information">
+                <ul class="list-inline right">
+                    <li><a href="#"><i class="fa fa-question-circle"></i><span>Have any questions </span></a></li> 
+                    <li><a href="sign-in.html"><span class="box-button">GET AN APPOINTMENT</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<nav class="navbar navbar-default navbar-sticky white bootsnav">
 <!-- Start Top Search -->
 <div class="top-search">
     <div class="container">
@@ -16,39 +40,47 @@ var headerMenu = `
     </div>
 </div>
 <!-- End Top Search -->
-<div class="container ">
+<div class="container">
     <!-- Start Atribute Navigation -->
     <div class="attr-nav">
         <div class="social hidden-xs hidden-sm">
             <ul>
                 <li>
-                    <a class="social-facebook" data-placement="bottom" data-toggle="tooltip" href="#" title="" data-original-title="facebook">
+                    <a class="social-facebook" data-original-title="facebook" data-placement="bottom" data-toggle="tooltip" href="#" title="">
                         <i class="fa fa-facebook ">
                         </i>
                     </a>
                 </li>
                 <li>
-                    <a class="social-twitter" data-placement="bottom" data-toggle="tooltip" href="#" title="" data-original-title="twitter">
+                    <a class="social-twitter" data-original-title="twitter" data-placement="bottom" data-toggle="tooltip" href="#" title="">
                         <i class="fa fa-twitter">
                         </i>
                     </a>
                 </li>
                 <li>
-                    <a class="social-google" data-placement="bottom" data-toggle="tooltip" href="#" title="" data-original-title="google plus">
+                    <a class="social-google" data-original-title="google plus" data-placement="bottom" data-toggle="tooltip" href="#" title="">
                         <i class="fa fa-google-plus">
                         </i>
                     </a>
                 </li>
                 <li>
-                    <a class="social-youtobe" data-placement="bottom" data-toggle="tooltip" href="#" title="" data-original-title="youtobe">
+                    <a class="social-youtobe" data-original-title="youtobe" data-placement="bottom" data-toggle="tooltip" href="#" title="">
                         <i class="fa fa-youtube-play">
                         </i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="social-instagram" data-toggle="tooltip" data-placement="bottom" title="instagram"><i class="fa fa-instagram"></i></a>
-                </li> 
-                <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>       
+                    <a class="social-instagram" data-placement="bottom" data-toggle="tooltip" href="#" title="instagram">
+                        <i class="fa fa-instagram">
+                        </i>
+                    </a>
+                </li>
+                <li class="search">
+                    <a href="#">
+                        <i class="fa fa-search">
+                        </i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -60,16 +92,14 @@ var headerMenu = `
             </i>
         </button>
         <a class="navbar-brand" href="#brand">
-            <img src="assets/images/clemira-property-white.png" class="logo logo-display" alt="">
-            <img src="assets/images/clemira-property-black.png" class="logo logo-scrolled" alt="">
+            <img src="assets/images/clemira-property-black.png" class="logo" alt="">
         </a>
     </div>
     <!-- End Header Navigation -->
-   <!-- Collect the nav links, forms, and other content for toggling -->
-  
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-            <li class="active">
+            <li class=" active">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="index.html">
                     Home
                 </a>
@@ -340,28 +370,27 @@ var headerMenu = `
                 </ul>
             </li>
             <li>
-                <a href="/properties">
+                <a href="properties">
                     Properties
                 </a>
             </li>
-          
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     About us
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/contact-us">
+                        <a href="contact-us">
                             Contact us
                         </a>
                     </li>
                     <li>
-                        <a href="/sign-in">
+                        <a href="sign-in">
                             Sign In
                         </a>
                     </li>
                     <li>
-                        <a href="/sign-up">
+                        <a href="sign-up">
                             Sign Up
                         </a>
                     </li>
@@ -374,163 +403,147 @@ var headerMenu = `
                 </a>
             </li>
         </ul>
-    
-   </div>
-   
+    </div>
     <!-- /.navbar-collapse -->
 </div>
+</nav>
 `
-var footerSection = `
+
+let footerSection = `
 <div class="bg-theme call-to-actions pdt40 pdbt40">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="text-call-us">
-                    <h3>
-                        Do you want rent or sell your property
-                    </h3>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="text-call-us">
+                <h3>
+                    Do you want rent or sell your property
+                </h3>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="call-us text-right">
-                    <h3>
-                        Call Us  9952402011
-                    </h3>
-                    <a class="booking" href="#">
-                        For Enquiry
-                    </a>
-                </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="call-us text-right">
+                <h3>
+                    Call Us 
+                </h3>
+                <a class="booking" href="#">
+                    Booking 
+                </a>
             </div>
         </div>
     </div>
 </div>
+</div>
 
-    
-  <!--====================================
-    =            Section footer            =
-    =====================================-->
-  
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-one">
-                <div class="row">
-                    <div class="col-sm-12 col-md-5">
-                        <div class="footer-logo">
-                             <img src="assets/images/clemira-logo.png" alt="">
-                        </div>
-                        <p>
-                            <span class="copyright text-uppercase">Homezbay Real Estate</span> We know that buying and selling properties is not an easy. So, this platform is made to ensure that verified listings attract 100% genuine buyers and customers. Partner with Homezbay, 
-                            post property for sale or post rent ad for free and enjoy the benefits of partnering with us.
-                        </p>
+<footer id="footer">
+    <div class="container">
+        <div class="footer-one">
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="footer-logo">
+                         <img src="assets/images/clemira-logo.png" alt="">
                     </div>
-                    <div class="col-sm-12 col-md-3">
-                        <h4>
-                            Navigation
-                        </h4>
-                        <ul class="col-md-6 menu hide-bullets nopadding">
-                            <li>
-                                <a href="index.html">
-                                   Home
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="#">
-                                    Sell
-                                </a>
-                            </li> -->
-                            <!-- <li>
-                                <a href="#">
-                                    Rent
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="blog.html">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="col-md-6 menu hide-bullets nopadding">
-                            <!-- <li>
-                                <a href="about-us.html">
-                                    About Us
-                                </a>
-                            </li> -->
-                            <!-- <li>
-                                <a href="#">
-                                    Advertise
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Service
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="#">
-                                    Privacy Policy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Disclaimer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Faq
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                        <h4>
-                            Subscribe & News Letter
-                        </h4>
-                            <div class="wrap-newsletter">
-                                <p>
-                                    Get information Sales property on our site
-                                </p>
-                                <div class="input-group">
-                                    <input class="form-control input-lg" placeholder="Subscribe to your email valid" type="text">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-lg button-theme" type="button">
-                                                <i class="fa fa-envelope">
-                                                </i>
-                                            </button>
-                                        </span>
-                                </div> 
-                            </div>
-                    </div>
+                    <p>
+                        <span class="copyright text-uppercase">Clemira Responsive Real Estate</span> is a premium HTML5 template, is a perfect choice for your real estate website. because of its clean, modern, 100% responsive & W3C HTML validate coding, and awesome design especially made for real estate agents.
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="footer-two">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="text-center">
-                            Copyright © 2022
-                            <strong>
-                                Homezbay Real Estate
-                            </strong>
-                            —
-                            <a class="copyright" href="#">
-                               Homezbay
+                <div class="col-sm-12 col-md-3">
+                    <h4>
+                        Navigation
+                    </h4>
+                    <ul class="col-md-6 menu hide-bullets nopadding">
+                        <li>
+                            <a href="#">
+                               Home
                             </a>
-                            | All Rights Reserved.
+                        </li>
+                        <li>
+                            <a href="#">
+                                Sell
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Rent
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="col-md-6 menu hide-bullets nopadding">
+                        <li>
+                            <a href="#">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Advertise
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <h4>
+                        Subscribe & News Letter
+                    </h4>
+                        <div class="wrap-newsletter">
+                            <p>
+                                Get information Sales property on our site
+                            </p>
+                            <div class="input-group">
+                                <input class="form-control input-lg" placeholder="Subscribe to your email valid" type="text">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-lg button-theme" type="button">
+                                            <i class="fa fa-envelope">
+                                            </i>
+                                        </button>
+                                    </span>
+                            </div> 
                         </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    <div class="footer-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="text-center">
+                        Copyright © 2016
+                        <strong>
+                            Clemira Real Estate
+                        </strong>
+                        —
+                        <a class="copyright" href="#">
+                            Clemira
+                        </a>
+                        | Digital All Rights Reserved.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
 `
-document.querySelector(".mainHeader").innerHTML=headerMenu;
+document.querySelector(".combined-header").innerHTML=headerMenu;
 document.querySelector(".footerSection").innerHTML=footerSection;

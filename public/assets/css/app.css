@@ -7601,8 +7601,14 @@ body.modal-open {
     border: 1px solid rgba(84, 84, 84, 0.67);
 }
 
+/* Bootstrap CSS */
+.d-none{
+    display: none;
+}
 
-
+.errorMsg{
+    color: red;
+}
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/

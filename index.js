@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 require('dotenv').config()
 const routes = require('./v1/routes');
+const staticRoute  = require('./v1/routes/staticRoute')
 
 const http = require('http');
 const config = require('./config/config');
@@ -13,8 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('./public'))
+// app.use(express.static('public'))
+// app.use('/public', express.static('public'))
 
 app.use(config.baseUrl+ "/api/v1",routes)
+app.use(config.baseUrl, staticRoute)
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -32,9 +36,9 @@ process.exit();
     })
 
 
-app.get('/', (req, res) => {
-    return res.send("HOME PAGE")
-})
+// app.get('/', (req, res) => {
+//     return res.send("HOME PAGE")
+// })
 
 // const getYoutubePlayLists = async () => {
 //     let url = `https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=aabc&maxResults=25&key=abcd`
