@@ -1,5 +1,5 @@
 {
-  "name": "homezbay",
+  "name": "learningsea",
   "version": "1.0.0",
   "description": "Real estate master",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sujay_kumar_n",
+  "author": "sujay_kumar_n",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1198.0",
