@@ -5,7 +5,7 @@ const UsersSchema = mongoose.Schema({
     email: { type: String, unique: true },
     mobile: { type: String, unique: true },
     password: String,
-    provider: { type: String, enum: ['HOMEZBAY', 'GOOGLE', 'APPLE'], default: "HOMEZBAY" },
+    provider: { type: String, enum: ['COMPANY_NAME', 'GOOGLE', 'APPLE'], default: "COMPANY_NAME" },
     roles: [String],
     initialized: Boolean,
     apple_id: String,

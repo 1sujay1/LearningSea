@@ -7,7 +7,7 @@ const USER_ROLES = {
 }
 
 const USER_LOGIN_PROVIDER = {
-    HOMEZBAY: "HOMEZBAY",
+    COMPANY_NAME: "COMPANY_NAME",
     GOOGLE: "GOOGLE"
 }
 

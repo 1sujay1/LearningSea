@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 require('dotenv').config()
 const routes = require('./v1/routes');
-const staticRoute  = require('./v1/routes/staticRoute')
+const staticRoute = require('./v1/routes/staticRoute')
 
 const http = require('http');
 const config = require('./config/config');
@@ -17,7 +17,7 @@ app.use(express.static('./public'))
 // app.use(express.static('public'))
 // app.use('/public', express.static('public'))
 
-app.use(config.baseUrl+ "/api/v1",routes)
+app.use(config.baseUrl + "/api/v1", routes)
 app.use(config.baseUrl, staticRoute)
 
 app.use(function (req, res, next) {
@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_DD, {
     .then(console.log("Connected to mongodb instance... " + process.env.MONGO_DD))
     .catch(err => {
         console.error("Err0r connecting to mongodb ", err)
-process.exit();
+        process.exit();
     })
 
 
