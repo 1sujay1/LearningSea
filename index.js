@@ -1,29 +1,31 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const mongoose = require('mongoose')
-require('dotenv').config()
-const routes = require('./v1/routes');
-const staticRoute = require('./v1/routes/staticRoute')
+const mongoose = require("mongoose");
+require("dotenv").config();
+const routes = require("./v1/routes");
+const staticRoute = require("./v1/routes/staticRoute");
 
-const http = require('http');
-const config = require('./config/config');
-const server = http.createServer(app)
-
+const http = require("http");
+const config = require("./config/config");
+const server = http.createServer(app);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('./public'))
+app.use(express.static("public"));
 // app.use(express.static('public'))
 // app.use('/public', express.static('public'))
 
-app.use(config.baseUrl + "/api/v1", routes)
-app.use(config.baseUrl, staticRoute)
+app.use(config.baseUrl + "/api/v1", routes);
+app.use(config.baseUrl, staticRoute);
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
 });
 // mongoose.connect(process.env.MONGO_DD, {
 //     useNewUrlParser: true, useUnifiedTopology: true
@@ -34,7 +36,6 @@ app.use(function (req, res, next) {
 //         console.error("Err0r connecting to mongodb ", err)
 //         process.exit();
 //     })
-
 
 // app.get('/', (req, res) => {
 //     return res.send("HOME PAGE")
@@ -47,9 +48,6 @@ app.use(function (req, res, next) {
 //     return resp;
 // }
 
-
-
-
 server.listen(process.env.APP_PORT, () => {
-    console.log(`Listening to port ${process.env.APP_PORT}`)
-})
+  console.log(`Listening to port ${process.env.APP_PORT}`);
+});
